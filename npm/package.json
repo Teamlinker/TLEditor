@@ -1,7 +1,7 @@
 {
   "name": "@teamlinker/editor",
-  "version": "0.0.3",
-  "description": "",
+  "version": "0.0.4",
+  "description": "A simple block-style editor based on vue3 and typescript",
   "main": "editor.js",
   "repository": {
     "type": "git",

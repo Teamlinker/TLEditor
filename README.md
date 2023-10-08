@@ -199,5 +199,5 @@ let itemList=arrPromise.filter(item=>{
 })
 objEditor.value.insertConfig(itemList)
 ```
-### About Teamlinker
+## About Teamlinker
 Teamlinker is a cooperation platform that integrates different kind of modules.You can contact your teammates,assign your tasks,start a meeting,schedule your events,manage your files and so on with Teamlinker.
