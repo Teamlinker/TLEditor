@@ -1,5 +1,5 @@
 <h1 align="center">
-editor
+@Teamlinker/editor
 </h1>
 <p align="center">
 A simple block-style editor based on <b>vue3</b> and <b>typescript</b>
