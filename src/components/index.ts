@@ -1,10 +1,10 @@
-import Editor from "./editor/index.vue"
+import TLEditor from "./editor/index.vue"
 
-export { Editor };
+export { TLEditor };
 
 const  root= {
     install(App:any) {
-        App.component("tl-editor", Editor);
+        App.component("TLEditor", TLEditor);
     },
 };
 

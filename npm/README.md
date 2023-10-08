@@ -1,16 +1,16 @@
 <h1 align="center">
-TL-Editor
+TLEditor
 </h1>
 <p align="center">
 A simple block-style editor based on <b>vue3</b> and <b>typescript</b>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/tl-editor">
-    <img src="https://flat.badgen.net/npm/v/tl-editor?icon=npm" alt="npm"/>
+  <a href="https://www.npmjs.com/package/tleditor">
+    <img src="https://flat.badgen.net/npm/v/tleditor?icon=npm" alt="npm"/>
   </a>
-  <a href="https://www.npmjs.com/package/tl-editor">
-    <img src="https://flat.badgen.net/bundlephobia/minzip/tl-editor?color=green" alt="Minzipped size"/>
+  <a href="https://www.npmjs.com/package/tleditor">
+    <img src="https://flat.badgen.net/bundlephobia/minzip/tleditor?color=green" alt="Minzipped size"/>
   </a>
 </p>
 
@@ -37,14 +37,15 @@ Teamlinker provides a full experience of this package.Have a try!
 
 ## Installation
 ```shell
-npm i tl-editor
+npm i tleditor
 ```
 ## Usage
 
+### Global
 main.ts
 ```typescript
-import Editor from "tl-editor"
-import "tl-editor/style.css"
+import Editor from "tleditor"
+import "tleditor/style.css"
 
 app.use(Editor)
 ```
@@ -52,6 +53,23 @@ app.use(Editor)
 ```vue
 <script setup lang="ts">
 import {ref} from "vue";
+const content=ref([])
+</script>
+
+<template>
+	<div style="width: 500px">
+		<TLEditor v-model="content"></TLEditor>
+	</div>
+</template>
+```
+
+### Sfc
+.vue
+```vue
+<script setup lang="ts">
+import {ref} from "vue";
+import {TLEditor} from "tleditor"
+import "tleditor/style.css"
 const content=ref([])
 </script>
 

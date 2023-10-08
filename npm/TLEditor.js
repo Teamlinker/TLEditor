@@ -324,65 +324,65 @@ function z(E, e, i) {
     for (let N of l)
       if (N == p)
         for (let w = u[0]; w < p.arr.length; w++) {
-          let T = p.arr[w];
-          if (T.style[e] != i)
-            if (T == k) {
+          let v = p.arr[w];
+          if (v.style[e] != i)
+            if (v == k) {
               let H;
               if (i)
                 H = {
-                  value: T.value.substring(u[1]),
+                  value: v.value.substring(u[1]),
                   style: {
-                    ...T.style,
+                    ...v.style,
                     [e]: i
                   },
                   type: y.TEXT
                 };
               else {
                 let m = {
-                  ...T.style
+                  ...v.style
                 };
                 delete m[e], H = {
-                  value: T.value.substring(u[1]),
+                  value: v.value.substring(u[1]),
                   style: m,
                   type: y.TEXT
                 };
               }
-              T.value = T.value.substring(0, u[1]), p.arr.splice(w + 1, 0, H), w++, L = H, C = 0;
+              v.value = v.value.substring(0, u[1]), p.arr.splice(w + 1, 0, H), w++, L = H, C = 0;
             } else
-              i ? T.style[e] = i : delete T.style[e];
+              i ? v.style[e] = i : delete v.style[e];
           else
-            T == k && (C = u[1]);
+            v == k && (C = u[1]);
         }
       else if (N == g)
         for (let w = 0; w <= c[0]; w++) {
-          let T = g.arr[w];
-          if (T.style[e] != i)
-            if (T == I) {
+          let v = g.arr[w];
+          if (v.style[e] != i)
+            if (v == I) {
               let H;
               if (i)
                 H = {
-                  value: T.value.substring(0, c[1]),
+                  value: v.value.substring(0, c[1]),
                   style: {
-                    ...T.style,
+                    ...v.style,
                     [e]: i
                   },
                   type: y.TEXT
                 };
               else {
                 let m = {
-                  ...T.style
+                  ...v.style
                 };
                 delete m[e], H = {
-                  value: T.value.substring(0, c[1]),
+                  value: v.value.substring(0, c[1]),
                   style: m,
                   type: y.TEXT
                 };
               }
-              T.value = T.value.substring(c[1]), g.arr.splice(w, 0, H), P = H, q = H.value.length;
+              v.value = v.value.substring(c[1]), g.arr.splice(w, 0, H), P = H, q = H.value.length;
             } else
-              i ? T.style[e] = i : delete T.style[e];
+              i ? v.style[e] = i : delete v.style[e];
           else
-            T == I && (q = c[1]);
+            v == I && (q = c[1]);
         }
       else
         N.arr.forEach((w) => {
@@ -1122,7 +1122,7 @@ class Ne {
 const Se = {
   style: { position: "absolute", boxShadow: "0px 0px 2px 2px rgba(169, 169, 169, 0.2)", backgroundColor: "white", border: "1px solid rgba(169, 169, 169, 0.2)", width: "150px", height: "200px", overflow: "auto", outlineWidth: "0", "z-index": "10000" },
   tabIndex: "-1"
-}, ve = ["onMousedown"], Te = /* @__PURE__ */ ee({
+}, Te = ["onMousedown"], ve = /* @__PURE__ */ ee({
   __name: "popMenu",
   props: {
     objEditor: {},
@@ -1148,7 +1148,7 @@ const Se = {
         style: te([{ height: "35px", display: "flex", "align-items": "center", "justify-content": "center", cursor: "pointer" }, { borderBottom: s !== i.value.length - 1 ? "rgb(241,241,241) 1px solid" : "" }]),
         key: l.type,
         onMousedown: (r) => a(l)
-      }, ae(l.title), 45, ve))), 128))
+      }, ae(l.title), 45, Te))), 128))
     ]));
   }
 });
@@ -1157,7 +1157,7 @@ const le = (E, e) => {
   for (const [a, t] of e)
     i[a] = t;
   return i;
-}, Ce = /* @__PURE__ */ le(Te, [["__scopeId", "data-v-5cf468f7"]]), ke = ["onClick"], Pe = { style: { height: "30px", "border-bottom": "1px lightgray solid" } }, we = ["onClick"], Oe = ["src"], Ae = /* @__PURE__ */ ee({
+}, Ce = /* @__PURE__ */ le(ve, [["__scopeId", "data-v-5cf468f7"]]), ke = ["onClick"], Pe = { style: { height: "30px", "border-bottom": "1px lightgray solid" } }, we = ["onClick"], Oe = ["src"], Ae = /* @__PURE__ */ ee({
   __name: "quote",
   props: {
     objEditor: {},
@@ -1233,7 +1233,7 @@ const le = (E, e) => {
   }
 });
 const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["onBlur", "innerHTML", "onKeydown", "onFocus", "placeholder"], De = ["innerHTML"], _e = {
-  name: "tl-editor"
+  name: "TLEditor"
 }, He = /* @__PURE__ */ ee({
   ..._e,
   props: {
@@ -1257,8 +1257,8 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
       i("uploadFile", m, x);
     }, o.onPopMenuClickFunc = (m, x) => {
       i("popMenuClick", m, x);
-    }, o.onCustomMenuClickFunc = (m, x, v, S) => {
-      i("customAnchorClick", m, x, v, S);
+    }, o.onCustomMenuClickFunc = (m, x, T, S) => {
+      i("customAnchorClick", m, x, T, S);
     }, ye().vnode.props.onQuoteList && (o.onQuoteListFunc = (m, x) => {
       i("quoteList", m, x);
     });
@@ -1268,7 +1268,7 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
       i("update:modelValue", h);
     }, {
       deep: !0
-    }), ne(() => a.modelValue, (m, x, v) => {
+    }), ne(() => a.modelValue, (m, x, T) => {
       if (o.setLineList(a.modelValue), h.length == 0 && o.addLine(""), x && x.length > 0 && !f) {
         let S = JSON.parse(JSON.stringify(x));
         S.forEach((R) => {
@@ -1294,12 +1294,12 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
       o.onDbClick(m);
     }, p = (m, x) => {
       o.onBlur(m, x);
-    }, g = (m, x, v) => {
-      v.metaKey ? (b.handleInnerHtml(m, v.currentTarget, !1, o.onGetLineConfigType), M(() => {
+    }, g = (m, x, T) => {
+      T.metaKey ? (b.handleInnerHtml(m, T.currentTarget, !1, o.onGetLineConfigType), M(() => {
         i("metaEnter");
-      })) : o.onEnter(m, x, v);
-    }, k = (m, x, v) => {
-      o.onDelete(m, x, v);
+      })) : o.onEnter(m, x, T);
+    }, k = (m, x, T) => {
+      o.onDelete(m, x, T);
     }, I = (m) => {
       o.onMouseDown(m);
     }, L = (m) => {
@@ -1308,15 +1308,15 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
       let m = window.getSelection();
       if (m.rangeCount == 0)
         return;
-      let x = m.getRangeAt(0), v = x.startOffset;
+      let x = m.getRangeAt(0), T = x.startOffset;
       l = [];
       let S = x.startContainer;
       if (S.tagName === "DIV")
-        l = [0, v], l.unshift(Array.from(S.parentElement.children).indexOf(S));
+        l = [0, T], l.unshift(Array.from(S.parentElement.children).indexOf(S));
       else {
-        l = [v];
+        l = [T];
         let A = S.parentElement;
-        A.tagName == "DIV" ? (v = Array.from(A.childNodes).indexOf(S), l.unshift(v), S = A) : (v = Array.from(A.parentElement.childNodes).indexOf(A), l.unshift(v), S = A.parentElement), l.unshift(Array.from(S.parentElement.children).indexOf(S));
+        A.tagName == "DIV" ? (T = Array.from(A.childNodes).indexOf(S), l.unshift(T), S = A) : (T = Array.from(A.parentElement.childNodes).indexOf(A), l.unshift(T), S = A.parentElement), l.unshift(Array.from(S.parentElement.children).indexOf(S));
       }
     }, C = (m) => {
       P();
@@ -1336,12 +1336,12 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
         }
         f = !0;
       }
-    }, T = (m) => {
+    }, v = (m) => {
       if (o.onClick(m), a.readonly) {
-        let x = m.target, v = x.getAttribute("type");
-        if (x.tagName === "A" && v) {
+        let x = m.target, T = x.getAttribute("type");
+        if (x.tagName === "A" && T) {
           let S = x.getAttribute("value");
-          i("linkClick", Number(v), S, m.x, m.y);
+          i("linkClick", Number(T), S, m.x, m.y);
         }
       }
     }, H = (m) => {
@@ -1354,15 +1354,15 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
           value: "&nbsp;"
         });
       });
-      let v = h[l[0]], S = n.value[l[0]];
-      b.handleInnerHtml(v, S, !1, o.onGetLineConfigType);
-      let A = v.arr[l[1]], R;
+      let T = h[l[0]], S = n.value[l[0]];
+      b.handleInnerHtml(T, S, !1, o.onGetLineConfigType);
+      let A = T.arr[l[1]], R;
       if (A) {
         let V = JSON.parse(JSON.stringify(A));
-        V.value = A.value.substring(l[2]), A.value = A.value.substring(0, l[2]), v.arr.splice(l[1] + 1, 0, ...x, V), R = { endIndex: l[1] + x.length };
+        V.value = A.value.substring(l[2]), A.value = A.value.substring(0, l[2]), T.arr.splice(l[1] + 1, 0, ...x, V), R = { endIndex: l[1] + x.length };
       } else
-        v.arr.push(...x), R = { endIndex: l[1] + x.length - 1 };
-      b.fixLine(v, R), M(() => {
+        T.arr.push(...x), R = { endIndex: l[1] + x.length - 1 };
+      b.fixLine(T, R), M(() => {
         let V = window.getSelection(), Y = document.createRange();
         Y.setStart(S.childNodes[R.endIndex], 1), Y.setEnd(S.childNodes[R.endIndex], 1), V.removeAllRanges(), V.addRange(Y);
       });
@@ -1372,7 +1372,7 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
     }), e({
       insertConfig: H
     }), (m, x) => {
-      var v;
+      var T;
       return D(), B(J, null, [
         W("div", xe({
           ref_key: "root",
@@ -1384,7 +1384,7 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
           onCopy: N
         }, m.$attrs), [
           m.readonly ? (D(!0), B(J, { key: 1 }, $(X(h), (S, A) => (D(), B("div", {
-            onClick: T,
+            onClick: v,
             key: A + 1,
             innerHTML: X(b).handle(S, X(o).onSetLineConfigType),
             style: { "line-height": "1.5", "min-height": "21px" }
@@ -1407,11 +1407,11 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
             onMousemove: L,
             onDblclick: c,
             onPaste: F,
-            onClick: T,
+            onClick: v,
             placeholder: m.placeholder ?? "type something"
           }, null, 40, Re))), 128))
         ], 16),
-        s.value && ((v = m.popMenuList) == null ? void 0 : v.length) > 0 ? (D(), se(re, {
+        s.value && ((T = m.popMenuList) == null ? void 0 : T.length) > 0 ? (D(), se(re, {
           key: 0,
           to: "body"
         }, [
@@ -1438,12 +1438,12 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
     };
   }
 });
-const je = /* @__PURE__ */ le(He, [["__scopeId", "data-v-90b1d48a"]]), Ge = {
+const je = /* @__PURE__ */ le(He, [["__scopeId", "data-v-737801f5"]]), Ge = {
   install(E) {
-    E.component("tl-editor", je);
+    E.component("TLEditor", je);
   }
 };
 export {
-  je as Editor,
+  je as TLEditor,
   Ge as default
 };

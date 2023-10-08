@@ -1,13 +1,12 @@
 <template>
 	<div style="width: 300px;height: 500px;">
-		<tl-editor v-model="content" style="width: 100%;box-sizing: border-box"></tl-editor>
+		<TLEditor v-model="content" style="width: 100%;box-sizing: border-box"></TLEditor>
 	</div>
 </template>
 
 <script setup lang="ts">
 import {ref} from "vue";
 import {IEditor_Content_Line} from "./components/editor/types";
-import TlEditor from "./components/editor/index.vue";
 const content=ref<IEditor_Content_Line[]>([])
 </script>
 

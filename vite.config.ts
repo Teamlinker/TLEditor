@@ -11,8 +11,8 @@ export default defineConfig({
     outDir: "dist", //输出文件名称
     lib: {
       entry: path.resolve(__dirname, "./src/components/index.ts"), //指定组件编译入口文件
-      name: "tl-editor",
-      fileName: "tl-editor",
+      name: "TLEditor",
+      fileName: "TLEditor",
     },
     rollupOptions: {
       external: ["vue"],

@@ -6,7 +6,36 @@ import { ExtractPropTypes } from 'vue';
 import { PropType } from 'vue';
 import { VNodeProps } from 'vue';
 
-export declare const Editor: DefineComponent<{
+declare type IEditor_Content_Line = {
+    arr: IEditor_Content_Line_Config[];
+    selectStartIndexPath?: number[];
+    selectEndIndexPath?: number[];
+};
+
+declare type IEditor_Content_Line_Config = {
+    style?: IEditor_Content_Line_Style;
+    value: string;
+    link?: string;
+    type: any;
+    width?: number;
+    label?: string;
+};
+
+declare type IEditor_Content_Line_Style = {
+    fontStyle?: string;
+    fontWeight?: string;
+    color?: string;
+    backgroundColor?: string;
+    textDecoration?: string;
+    fontSize?: string;
+};
+
+declare const root: {
+    install(App: any): void;
+};
+export default root;
+
+export declare const TLEditor: DefineComponent<{
     readonly: {
         type: PropType<boolean>;
     };
@@ -83,34 +112,5 @@ export declare const Editor: DefineComponent<{
     onSetLineConfigType?: (linkElement: HTMLElement, objConfig: IEditor_Content_Line_Config) => any;
     onGetLineConfigType?: (config: IEditor_Content_Line_Config, linkElement: HTMLElement) => any;
 }, {}, {}>;
-
-declare type IEditor_Content_Line = {
-    arr: IEditor_Content_Line_Config[];
-    selectStartIndexPath?: number[];
-    selectEndIndexPath?: number[];
-};
-
-declare type IEditor_Content_Line_Config = {
-    style?: IEditor_Content_Line_Style;
-    value: string;
-    link?: string;
-    type: any;
-    width?: number;
-    label?: string;
-};
-
-declare type IEditor_Content_Line_Style = {
-    fontStyle?: string;
-    fontWeight?: string;
-    color?: string;
-    backgroundColor?: string;
-    textDecoration?: string;
-    fontSize?: string;
-};
-
-declare const root: {
-    install(App: any): void;
-};
-export default root;
 
 export { }
