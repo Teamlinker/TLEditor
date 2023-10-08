@@ -1232,8 +1232,10 @@ const le = (E, e) => {
     ], 8, ke));
   }
 });
-const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["onBlur", "innerHTML", "onKeydown", "onFocus", "placeholder"], De = ["innerHTML"], _e = /* @__PURE__ */ ee({
-  __name: "index",
+const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["onBlur", "innerHTML", "onKeydown", "onFocus", "placeholder"], De = ["innerHTML"], _e = {
+  name: "tl-editor"
+}, He = /* @__PURE__ */ ee({
+  ..._e,
   props: {
     readonly: { type: Boolean },
     modelValue: {},
@@ -1436,12 +1438,12 @@ const Me = /* @__PURE__ */ le(Ae, [["__scopeId", "data-v-d7f26c8d"]]), Re = ["on
     };
   }
 });
-const He = /* @__PURE__ */ le(_e, [["__scopeId", "data-v-81822f8b"]]), Xe = {
+const je = /* @__PURE__ */ le(He, [["__scopeId", "data-v-90b1d48a"]]), Ge = {
   install(E) {
-    E.component("TLEditor", He);
+    E.component("tl-editor", je);
   }
 };
 export {
-  He as Editor,
-  Xe as default
+  je as Editor,
+  Ge as default
 };

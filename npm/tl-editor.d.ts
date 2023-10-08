@@ -69,15 +69,15 @@ export declare const Editor: DefineComponent<{
         type: PropType<any>;
     };
 }>> & {
+    "onUpdate:modelValue"?: (value: IEditor_Content_Line[]) => any;
+    onUploadFile?: (file: File, handleFunc: (fileId: string, path: string) => void) => any;
+    onPopMenuClick?: (type: any, handleFunc: (item: IEditor_Content_Line_Config) => void) => any;
+    onCustomAnchorClick?: (type: any, value: string, link: string, label: string) => any;
     onQuoteList?: (keyword: string, handleFunc: (list: {
         value: string;
         label: string;
         photo: string;
     }[]) => void) => any;
-    "onUpdate:modelValue"?: (value: IEditor_Content_Line[]) => any;
-    onUploadFile?: (file: File, handleFunc: (fileId: string, path: string) => void) => any;
-    onPopMenuClick?: (type: any, handleFunc: (item: IEditor_Content_Line_Config) => void) => any;
-    onCustomAnchorClick?: (type: any, value: string, link: string, label: string) => any;
     onMetaEnter?: () => any;
     onLinkClick?: (type: any, value: string, x: number, y: number) => any;
     onSetLineConfigType?: (linkElement: HTMLElement, objConfig: IEditor_Content_Line_Config) => any;

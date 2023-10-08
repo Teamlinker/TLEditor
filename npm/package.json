@@ -1,11 +1,11 @@
 {
-  "name": "@teamlinker/editor",
-  "version": "0.0.4",
+  "name": "tl-editor",
+  "version": "0.0.1",
   "description": "A simple block-style editor based on vue3 and typescript",
-  "main": "editor.js",
+  "main": "tl-editor.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Teamlinker/editor.git"
+    "url": "https://github.com/Teamlinker/tl-editor.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,5 +13,5 @@
   "keywords": ["vue","teamlinker","editor","text editor","block editor"],
   "author": "teamlinker",
   "license": "ISC",
-  "types": "./editor.d.ts"
+  "types": "./tl-editor.d.ts"
 }

@@ -17,6 +17,12 @@
 	</teleport>
 </template>
 
+<script lang="ts">
+export default {
+	name:"tl-editor"
+}
+</script>
+
 <script setup lang="ts">
 import {getCurrentInstance, nextTick, onBeforeUnmount, ref, watch} from "vue";
 import {RichEditorEvent} from "./event";

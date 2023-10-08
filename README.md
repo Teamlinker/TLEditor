@@ -1,5 +1,5 @@
 <h1 align="center">
-@Teamlinker/editor
+TL-Editor
 </h1>
 <p align="center">
 A simple block-style editor based on <b>vue3</b> and <b>typescript</b>
@@ -37,14 +37,14 @@ Teamlinker provides a full experience of this package.Have a try!
 
 ## Installation
 ```shell
-npm i @teamlinker/editor
+npm i tl-editor
 ```
 ## Usage
 
 main.ts
 ```typescript
-import Editor from "@teamlinker/editor"
-import "@teamlinker/editor/style.css"
+import Editor from "tl-editor"
+import "tl-editor/style.css"
 
 app.use(Editor)
 ```

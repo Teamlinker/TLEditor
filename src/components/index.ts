@@ -4,7 +4,7 @@ export { Editor };
 
 const  root= {
     install(App:any) {
-        App.component("TLEditor", Editor);
+        App.component("tl-editor", Editor);
     },
 };
 
