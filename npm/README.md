@@ -6,11 +6,11 @@ A simple block-style editor based on <b>vue3</b> and <b>typescript</b>
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/@teamlinker/editor">
-    <img src="https://flat.badgen.net/npm/v/@teamlinker/editor?icon=npm" alt="npm"/>
+  <a href="https://www.npmjs.com/package/tl-editor">
+    <img src="https://flat.badgen.net/npm/v/tl-editor?icon=npm" alt="npm"/>
   </a>
-  <a href="https://www.npmjs.com/package/@teamlinker/editor">
-    <img src="https://flat.badgen.net/bundlephobia/minzip/@teamlinker/editor?color=green" alt="Minzipped size"/>
+  <a href="https://www.npmjs.com/package/tl-editor">
+    <img src="https://flat.badgen.net/bundlephobia/minzip/tl-editor?color=green" alt="Minzipped size"/>
   </a>
 </p>
 
