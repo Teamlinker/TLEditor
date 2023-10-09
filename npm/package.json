@@ -1,6 +1,6 @@
 {
   "name": "tleditor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A simple block-style editor based on vue3 and typescript",
   "main": "TLEditor.js",
   "repository": {
